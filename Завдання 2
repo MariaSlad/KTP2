@@ -1,0 +1,11 @@
+a, b = map(int, input().split())
+
+
+def equation(a, b):
+
+    variants = [lambda a, b: "bezlich", lambda a, b: "nema", lambda a, b: f"{-b / a:.2f}"]
+
+    return variants[bool(a) + bool(b)](a, b)
+
+
+print(equation(a, b))
